@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./assets/sss/style.css/.js/images">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <title>gif generator</title>
+</head>
+
+<body>
+<!-- //***************************** comment out *****************/ -->
+    
+<form id="class-form">
+<!-- <label for="gif-input"><img src="14981180607.gif " alt="href"></label>
+<label for="gif-input"><img src="giphy.gif" alt="href"></label>
+<label for="gif-input"><img src="./Magic_Bunny_v5.gif " alt="href"></label>
+<label for="gif-input"><img src="source.gif" alt="href"></label>
+<label for="gif-input"><img src="Wizard-Clap-by-Markus-Magnusson.gif" alt="href"></label>
+<label for="gif-input"><img src="giphy.gif" alt="href"></label></div> -->
+
+<!-- *************************************************************** -->
+    <h1>Gif</h1>
+      <div id="buttons-view"></div>
+      <input type="text" id="gif-input"><br>
+
+      <input id="./Magic_Bunny_v5.gif" type="submit" value="add gif">
+      </form>
+      
+      
+        <div class="results"></div>
+          <div class="panel panel-default"></div>
+          <div class="panel-body"></div>
+          <div class="img-box"></div>
+          <div class="nav bar"></div>
+
+          <script type="text/javascript">
+
+        var buttonArray=[]
+
+
+        // ajax here
+
+
+
+
+
+
+
+        // might go further
+var gifs=["magic bunny", "wizard clap"]
+        function renderButtons() {
+
+          $("#buttons-view").empty();
+
+
+          for (var i = 0; i < gifs.length; i++) {
+
+
+            var a = $("<button>");
+
+            a.addClass("gif");
+
+            a.attr("data-name", gifs[i]);
+
+            a.text(gifs[i]);
+
+            $("#buttons-view").append(a);
+          }
+        }
+
+
+function alergiframe(event){
+  event.preventDefault();
+ var gif = $("#gif-input").val().trim();
+ buttonArray.push(gif);
+ renderButtons();
+};
+        $(document).on("click", ".gif", alergiframe);
+ 
+
+        renderButtons();
+          </script>
+
+    </body>
+      </html>
